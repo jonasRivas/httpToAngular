@@ -19,7 +19,7 @@ export class ProductosService {
 
     return new Promise( (resolve ,reject)=>{
       this.http.get("https://angular-html-10dbf.firebaseio.com/productos_idx.json")
-        .subscribe((resp: ProductoInterface) => {
+        .subscribe((resp: ProductoInterface[]) => {
           this.productos = resp;
           this.cargando = false;
           resolve();
